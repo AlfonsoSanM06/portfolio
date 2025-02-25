@@ -34,4 +34,5 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/alfonsodocker:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/portfolio:latest
+          
