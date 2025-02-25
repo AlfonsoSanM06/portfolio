@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfonso - ASIR y DevOps Profesional</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --background-color: #ecf0f1;
+            --text-color: #34495e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background-color: var(--background-color);
+            transform: skewY(-3deg);
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+        }
+
+        main {
+            padding: 4rem 0;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .skill-card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .projects-list {
+            list-style-type: none;
+        }
+
+        .projects-list li {
+            background-color: #fff;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .projects-list li:hover {
+            transform: translateX(5px);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <h1>Alfonso</h1>
+            <p class="tagline">Especialista en ASIR | Entusiasta de DevOps</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="about">
+            <h2>Sobre mí</h2>
+            <p>Soy un profesional apasionado por la Administración de Sistemas Informáticos en Red (ASIR) con un enfoque especial en las prácticas de DevOps. Mi objetivo es combinar mis habilidades técnicas con una mentalidad orientada a la eficiencia para optimizar los procesos de desarrollo y operaciones.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Habilidades</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Administración de Sistemas</h3>
+                    <p>Experiencia en la gestión de sistemas Linux y Windows Server, incluyendo configuración, mantenimiento y optimización.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Redes y Seguridad</h3>
+                    <p>Conocimientos avanzados en configuración de redes, protocolos y implementación de medidas de seguridad.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Virtualización</h3>
+                    <p>Competencia en tecnologías de virtualización como VMware y Docker para crear entornos eficientes y escalables.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Automatización</h3>
+                    <p>Habilidad para crear scripts y utilizar herramientas de automatización para mejorar la eficiencia operativa.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>DevOps</h3>
+                    <p>Familiaridad con prácticas de CI/CD y herramientas como Jenkins, Git y Ansible.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Cloud Computing</h3>
+                    <p>Experiencia trabajando con plataformas cloud como AWS y Azure para implementar soluciones escalables.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Proyectos Destacados</h2>
+            <ul class="projects-list">
+                <li>Implementación de un sistema de monitorización integral utilizando Prometheus y Grafana</li>
+                <li>Desarrollo de una infraestructura como código utilizando Terraform para un entorno de producción en AWS</li>
+                <li>Creación de un pipeline de CI/CD completo con Jenkins para una aplicación web de alta disponibilidad</li>
+                <li>Optimización del rendimiento y seguridad de un cluster de servidores web Apache</li>
+            </ul>
+        </section>
+    </main>
+
+    <script>
+        // Puedes agregar interactividad adicional aquí si lo deseas
+    </script>
+</body>
+</html>
+apps-fileview.texmex_20250213.01_p1
+index.html
+Mostrando index.html. 
